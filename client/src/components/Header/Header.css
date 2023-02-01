@@ -1,0 +1,108 @@
+.main-header {
+  height: 60px;
+  padding: 0 20px;
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 0px 5px 0 rgba(82, 82, 82, 0.418);
+  z-index: 99;
+}
+
+.main-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  max-width: 1440px;
+}
+
+.main-header .left {
+  list-style: none;
+  display: none;
+  gap: 10px;
+}
+
+.main-header .left > li {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.main-header .center {
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.main-header .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-header .right i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.main-header .right .cart-icon {
+  position: relative;
+}
+
+.main-header .right .cart-icon > .cart-icon-text {
+  min-width: 20px;
+  text-align: center;
+  background: var(--blue);
+  color: var(--white);
+  padding: 2.5px;
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  font-size: 10px;
+  line-height: 1;
+  border-radius: 10px;
+}
+
+.main-header.sticky-header {
+  position: sticky;
+  transform: translateY(-80px);
+  top: 0;
+  animation: stickyHeader 0.3s ease forwards;
+}
+
+@media screen and (min-width: 900px) {
+  .main-header {
+    padding: 0 40px;
+  }
+
+  .header-content {
+    height: 80px;
+  }
+
+  .main-header .left {
+    display: flex;
+  }
+
+  .main-header .center {
+    font-size: 34px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .main-header .right {
+    gap: 25px;
+  }
+
+  .main-header .right i {
+    font-size: 24px;
+  }
+}
+
+@keyframes stickyHeader {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

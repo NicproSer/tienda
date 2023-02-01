@@ -1,0 +1,8 @@
+.terms-page .terminos {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.terms-page .terminos a {
+  color: var(--blue);
+}
